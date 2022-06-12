@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-const Logins = styled.div`  
+const CenterWrapper = styled.div`  
   width : 80%;
   justify-content :center;
   align-items : center;
@@ -25,25 +25,5 @@ const Logins = styled.div`
   }
 `;
 
-export default function Login() {
-  const onKeyDown = (e) => {
-    if (e.key === "Enter") {
-      const { href } = window.location;
-      window.location.href = `${href}/main`
-      console.log(e.target.value);
-    }
-  }
 
-  return (
-    <Logins>
-      <span>
-        Hello, Whats your name?
-      </span>
-      <input
-        maxLength="15"
-        onKeyDown={onKeyDown}
-        required
-      />
-    </Logins>
-  );
-}
+export default CenterWrapper;
